@@ -3,7 +3,7 @@ Web VPython 3.2
 import random
 ball = sphere(make_trail = True)
 ground = box(size = vec(100,1,10))
-#scene.camera.follow(ball)
+scene.camera.follow(ball) # 공을 따라 카메라 시점 전환
 
 while True : 
     rate(100)
@@ -22,7 +22,7 @@ while True :
         r = random.random()
         g = random.random()
         b = random.random()
-        #print(r,g,b)
+        print(r,g,b) 
         ball.color = vec(r,g,b)
         ball.trail_color = ball.color
         ground.color = ball.color
